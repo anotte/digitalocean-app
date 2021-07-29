@@ -7,6 +7,8 @@ app.use(express.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
+app.get('/callmesilent', (req, res) => res.send('Hello World!'))
+
 app.post('/', (req, res) => res.send(req.body))
 
 app.post('/callmesilent', (req, res) => {
