@@ -9,6 +9,9 @@ app.get('/', (req, res) => res.send('Hello World!'))
 
 app.post('/', (req, res) => res.send(req.body))
 
-app.post('/callmesilent', (req, res) => console.log('came on....' + req.body))
+app.post('/callmesilent', (req, res) => {
+    res.send(req.body)
+    console.log('came on....' + req.body.z)
+})
 
 app.listen(port, () => console.log(`sample-expressjs app listening on port ${port}!`))
