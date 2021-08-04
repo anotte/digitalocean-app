@@ -32,6 +32,11 @@ app.get('/callmesilent', (req, res) => res.send('Hello World!'))
 app.post('/', (req, res) => res.sendStatus(202))
 
 app.post('/callmesilent', (req, res) => {
+    fs.writeFile('/test.txt', req.body, err => {
+        if (err) {
+            console.error(err)
+            return
+        }
     res.send(req.body)
     console.log('came on....' + req.body.z)
 })
