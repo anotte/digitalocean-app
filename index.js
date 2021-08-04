@@ -32,7 +32,7 @@ app.get('/callmesilent', (req, res) => res.send('Hello World!'))
 app.post('/', (req, res) => res.sendStatus(202))
 
 app.post('/callmesilent', (req, res) => {
-    fs.writeFile('files/test.txt', req.body, err => {
+    fs.writeFile('files/test.txt', JSON.stringify(req.body), err => {
         if (err) {
             console.error(err)
             return
