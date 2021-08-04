@@ -26,7 +26,7 @@ app.get('/', (req, res) => res.send('Hello World!'))
 
 app.get('/callmesilent', (req, res) => res.send('Hello World!'))
 
-app.post('/', (req, res) => res.send(req.body))
+app.post('/', (req, res) => res.sendStatus(200);)
 
 app.post('/callmesilent', (req, res) => {
     res.send(req.body)
