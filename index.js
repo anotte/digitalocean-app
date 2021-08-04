@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 // All OPTIONS requests return a simple status: 'OK'
 app.options('*', (req, res) => {
     res.json({
-        status: 'OK'
+        status: 'OKZ'
     });
 });
 */
