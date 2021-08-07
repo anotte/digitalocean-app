@@ -35,11 +35,12 @@ app.post('/callmesilent', (req, res) => {
     fs.writeFile('files/test.txt', JSON.stringify(req.body), err => {
         if (err) {
             console.error(err)
+            res.status(500).send(err)
             return
         }
+        res.status(200).send(req.body)
         console.log('write file .....')
     })
-    res.send(req.body)
     console.log('came on....' + req.body.z)
 })
 
